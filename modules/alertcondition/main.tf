@@ -8,13 +8,13 @@ terraform {
 
 # Configure the New Relic provider
 provider "newrelic" {
-  account_id = "4400930"
-  api_key = "NRAK-30DHDNL5DL7WK5KPBS3OJQ8TLJG"   # Usually prefixed with 'NRAK'
+  account_id = var.account_id
+  api_key = var.api_key   # Usually prefixed with 'NRAK'
   region = "US"                    # Valid regions are US and EU
 }
 
 resource "newrelic_nrql_alert_condition" "host_memory_usage" {
-  account_id = 4400930
+  account_id = var.account_id
   policy_id = var.alert_policy_id
   type = "static"
   name = "Host Memory Usage"
