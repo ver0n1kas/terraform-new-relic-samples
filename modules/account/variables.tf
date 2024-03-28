@@ -1,5 +1,5 @@
 variable "count" {
-    type = int
+    type = number
     default = 0
 }
 
