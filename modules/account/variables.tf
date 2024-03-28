@@ -1,4 +1,4 @@
-variable "count" {
+variable "new_account_num" {
     type = number
     default = 0
 }
